@@ -1,0 +1,428 @@
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+.navbar-title:hover {
+    color: #ffffff;
+}
+
+.nav-links-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    font-weight: 500;
+}
+
+.nav-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.5rem 0.25rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+}
+
+.register-btn {
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.login-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background-color: rgba(31, 41, 55, 0.85);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 
+                0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 24rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.register-card-fix {
+    padding-bottom: 2.5rem; 
+}
+
+.card-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.card-subtitle {
+    text-align: center;
+    color: #93c5fd;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #d1d5db;
+    margin-bottom: 0.25rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #374151;
+    color: white;
+    border-radius: 0.5rem;
+    border: 1px solid #4b5563;
+    outline: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+.form-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 5rem;
+}
+
+.form-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #9ca3af;
+    transition: color 0.15s ease;
+}
+
+.checkbox-label:hover {
+    color: white;
+}
+
+.form-checkbox {
+    margin-right: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+.forgot-password-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #60a5fa;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.forgot-password-btn:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 
+                0 4px 6px -2px rgba(59, 130, 246, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 20px -5px rgba(59, 130, 246, 0.4);
+}
+
+.add-btn-style {
+    margin-top: 2rem;
+}
+
+.register-btn-style {
+    margin-top: 1rem;
+}
+
+.loading-text {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.125rem;
+    color: #9ca3af;
+}
+
+.details-card {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 30rem;
+    border-top: 5px solid #3498db;
+    text-align: center;
+}
+
+.details-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #3498db;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.details-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ecf0f1;
+}
+
+.content-container {
+    max-width: 90%;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #1f2937;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    color: white;
+    min-height: 80vh;
+}
+
+.content-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3498db;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.search-input {
+    width: 300px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    background-color: #374151;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    display: block;
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+.search-input:focus {
+    border-color: #3498db;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-header {
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+}
+
+.table-th {
+    padding: 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    background-color: #34495e;
+}
+
+.table-row {
+    background-color: #2c3e50;
+    transition: background-color 0.2s ease;
+}
+
+.table-row:nth-child(even) {
+    background-color: #374151;
+}
+
+.table-row:hover {
+    background-color: #3b506b;
+}
+
+.table-td {
+    padding: 1rem;
+    border-bottom: 1px solid #4b5563;
+    color: #ecf0f1;
+    font-size: 0.9rem;
+}
+
+.no-results {
+    text-align: center;
+    color: #9ca3af;
+    padding: 2rem;
+}
+
+.action-link-view {
+    color: #3498db;
+    text-decoration: none;
+    margin-right: 0.5rem;
+    transition: color 0.2s;
+}
+
+.action-link-view:hover {
+    color: #5dade2;
+}
+
+.action-link-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.action-link-delete:hover {
+    color: #c0392b;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.pagination-btn {
+    background-color: #4b5563;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.pagination-btn:hover:not(.active-page) {
+    background-color: #5c6778;
+}
+
+.pagination-btn.active-page {
+    background-color: #3498db;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.3);
+}
+
+.back-link-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.back-to-departments-link {
+    display: inline-block;
+    color: #3498db; 
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.back-to-departments-link:hover {
+    background-color: #3498db;
+    color: white;
+}
